@@ -1,0 +1,73 @@
+import { menu } from './menu.js';
+
+let order = [];
+
+
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('menu-item-add')) {
+    const index = e.target.dataset.index;
+    order.push(menu[index]);
+    console.log(order);
+    renderOrder(order);
+  }
+  if (e.target.classList.contains('order-item-remove')) {
+    const index = e.target.dataset.index;
+    order.splice(index, 1);
+    renderOrder(order);
+  }
+});
+
+function renderMenu(menu) {
+  const menuContainer = document.querySelector('.menu');
+  const menuHtml = menu.map((item, index) => {
+    return `
+    <div class="menu-item">
+      <p class="menu-emoji">${item.emoji}</p>
+      <div class="menu-item-details">
+        <p class="menu-item-name">${item.itemName}</p>
+        <p class="menu-item-ingredients">${item.ingredients.join(', ')}</p>
+        <p class="menu-item-price">$${item.price}</p>
+      </div>
+      <button class="menu-item-add" data-index="${index}">+</button>
+    </div>
+    `
+  }).join('');
+  menuContainer.innerHTML = menuHtml;
+}
+
+function renderOrder(order) {
+  const orderContainer = document.querySelector('.order');
+
+  // If no items in order, clear the order container
+  if (order.length === 0) {
+    orderContainer.innerHTML = '';
+    return;
+  }
+
+  const orderHeaderHtml = `
+  <p class="order-title">Your Order</p>
+  `;
+
+  const orderHtml = order.map((item, index) => {
+    return `
+    <div class="order-item">
+      <p class="order-item-name">${item.itemName}</p>
+      <button class="order-item-remove" data-index="${index}">remove</button>
+      <p class="order-item-price">$${item.price}</p>
+    </div>
+    `
+  }).join('');
+
+  const orderFooterHtml = `
+  <div class="order-total">
+    <p class="order-total-label">Total price:</p>
+    <p class="order-total-price">$${order.reduce((total, item) => total + item.price, 0)}</p>
+  </div>
+  <button class="order-total-button">Complete order</button>
+
+  `;
+
+  orderContainer.innerHTML = orderHeaderHtml + orderHtml + orderFooterHtml;
+}
+
+renderMenu(menu);

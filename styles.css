@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  background-color: #dddddd;
+  color: #000000;
+  
+  font-family: 'Smythe', cursive;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.header-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.header-content {
+  background-image: url('images/header.png');
+  background-size: cover;
+  background-position: center;
+  height: 167px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-size: 2.43rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-left: 46px;
+  margin-bottom: 0;
+  margin-top: 27px;
+}
+
+.header-subtitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-left: 46px;
+  margin-top: 18px;
+}
+
+.menu-and-order-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 27px;
+  flex-grow: 1;
+  min-height: 100vh;
+}
+
+.menu p {
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D2D2D2;
+  margin: 5px 46px;
+}
+
+.menu-item-details {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-emoji {
+  font-size: 4.875rem;
+  padding-right: 31px;
+}
+
+.menu-item-name {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.menu-item-ingredients {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #8B8B8B;
+  padding-top: 4px;
+}
+
+.menu-item-price {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #000000;
+  padding-top: 8px;
+}
+
+.menu-item-add {
+  background-color: #FFFFFF;
+  border: 1.5px solid #DEDEDE;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #3C3C3C;
+  cursor: pointer;
+  margin-left: auto;
+  padding-bottom: 5px;
+  flex-shrink: 0;
+}
+
+.menu-item-add:hover {
+  background-color: #3C3C3C;
+  color: #FFFFFF;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 46px;
+}
+
+.order-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin-top: 22px;
+}
+
+.order-item-name {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.order-item-remove {
+  background-color: transparent;
+  border: none;
+  font-family: 'Verdana', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #BBBBBB;
+  cursor: pointer;
+  padding-bottom: 5px;
+  flex-shrink: 0;
+}
+
+.order-item-price {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #000000;
+  margin-left: auto;
+}
+
+.order-total {
+  display: flex;
+  border-top: 2px solid #393333;
+  padding-top: 22px;
+  margin-top: 22px;
+}
+
+.order-total-label {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.order-total-price {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #000000;
+  margin-left: auto;
+}
+
+.order-total-button {
+  background-color: #16DB99;
+  font-family: 'Verdana', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+  padding: 15px 30px;
+  margin: 53px 0px;
+  text-align: center;
+  cursor: pointer;
+}
