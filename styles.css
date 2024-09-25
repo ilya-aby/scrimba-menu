@@ -78,8 +78,9 @@ p {
 }
 
 .menu-emoji {
-  font-size: 4.875rem;
+  font-size: 4rem;
   padding-right: 31px;
+  flex-shrink: 0;
 }
 
 .menu-item-name {
