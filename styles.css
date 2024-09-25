@@ -114,16 +114,17 @@ p {
   width: 40px;
   height: 40px;
   font-family: 'Inter', sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 200;
   color: #3C3C3C;
   cursor: pointer;
   margin-left: auto;
-  padding-bottom: 5px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .menu-item-add:hover {

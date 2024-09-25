@@ -31,7 +31,7 @@ function renderMenu(menu) {
         <p class="menu-item-ingredients">${item.ingredients.join(', ')}</p>
         <p class="menu-item-price">$${item.price}</p>
       </div>
-      <button class="menu-item-add" data-index="${index}">+</button>
+      <button class="menu-item-add" data-index="${index}">＋</button>
     </div>
     `
   }).join('');
